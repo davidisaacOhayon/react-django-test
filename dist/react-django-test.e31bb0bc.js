@@ -28856,18 +28856,27 @@ function App() {
     _useState2 = _slicedToArray(_useState, 2),
     selectedDiv = _useState2[0],
     setDiv = _useState2[1];
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "react_root_1"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "use State for changing dividers"), /*#__PURE__*/_react.default.createElement("div", {
     className: selectedDiv == 'div1' ? 'divBox active' : 'divBox',
     id: "div1"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "This is Div 1")), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "This is Div 1"), /*#__PURE__*/_react.default.createElement("p", null, "F = Ma")), /*#__PURE__*/_react.default.createElement("div", {
     className: selectedDiv == 'div2' ? 'divBox active' : 'divBox',
     id: "div2"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "This is Div 2")), /*#__PURE__*/_react.default.createElement("button", {
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "This is Div 2"), /*#__PURE__*/_react.default.createElement("p", null, "ay caramba")), /*#__PURE__*/_react.default.createElement("button", {
+    className: "divButton",
+    onClick: function onClick() {
+      return setDiv("div1");
+    },
+    value: "Div 1"
+  }, "Div 1"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "divButton",
     onClick: function onClick() {
       return setDiv("div2");
     },
-    value: "Div1"
-  }));
+    value: "Div 1"
+  }, "Div 2"));
 }
 var root = _reactDom.default.createRoot(document.getElementById('root'));
 root.render( /*#__PURE__*/_react.default.createElement(App, null));
