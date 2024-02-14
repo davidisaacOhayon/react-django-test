@@ -28851,35 +28851,47 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-function App() {
-  var _useState = (0, _react.useState)("div1"),
+function SideNav() {
+  var _useState = (0, _react.useState)("btn1"),
     _useState2 = _slicedToArray(_useState, 2),
-    selectedDiv = _useState2[0],
-    setDiv = _useState2[1];
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "react_root_1"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "use State for changing dividers"), /*#__PURE__*/_react.default.createElement("div", {
-    className: selectedDiv == 'div1' ? 'divBox active' : 'divBox',
-    id: "div1"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "This is Div 1"), /*#__PURE__*/_react.default.createElement("p", null, "F = Ma")), /*#__PURE__*/_react.default.createElement("div", {
-    className: selectedDiv == 'div2' ? 'divBox active' : 'divBox',
-    id: "div2"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "This is Div 2"), /*#__PURE__*/_react.default.createElement("p", null, "ay caramba")), /*#__PURE__*/_react.default.createElement("button", {
-    className: "divButton",
+    selectedButton = _useState2[0],
+    setButton = _useState2[1];
+  return /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    className: selectedButton == "btn1" ? "btn active" : "btn",
     onClick: function onClick() {
-      return setDiv("div1");
-    },
-    value: "Div 1"
-  }, "Div 1"), /*#__PURE__*/_react.default.createElement("button", {
-    className: "divButton",
+      setButton("btn1");
+    }
+  }, "Home")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    className: selectedButton == "btn2" ? "btn active" : "btn",
     onClick: function onClick() {
-      return setDiv("div2");
-    },
-    value: "Div 1"
-  }, "Div 2"));
+      setButton("btn2");
+    }
+  }, "Messages")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+    className: selectedButton == "btn3" ? "btn active" : "btn",
+    onClick: function onClick() {
+      setButton("btn3");
+    }
+  }, "My Course")));
 }
-var root = _reactDom.default.createRoot(document.getElementById('root'));
-root.render( /*#__PURE__*/_react.default.createElement(App, null));
+function App() {
+  var _useState3 = (0, _react.useState)("main_nav"),
+    _useState4 = _slicedToArray(_useState3, 2),
+    selectedDiv = _useState4[0],
+    setDiv = _useState4[1];
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: selectedDiv == "main_nav" ? "main_nav active" : "main_nav"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "nav_widget"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "My Timetable"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Access your course timetable.")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "nav_widget"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Student Details"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Check/Verify your information.")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "nav_widget"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Course Details"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Access all information about your course.")));
+}
+var mainContentRoot = _reactDom.default.createRoot(document.getElementById("main_content_root"));
+mainContentRoot.render( /*#__PURE__*/_react.default.createElement(App, null));
+var sideNavRoot = _reactDom.default.createRoot(document.getElementById("side_nav"));
+sideNavRoot.render( /*#__PURE__*/_react.default.createElement(SideNav, null));
 },{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -28905,7 +28917,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62995" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63995" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

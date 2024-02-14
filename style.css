@@ -1,58 +1,114 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: "Roboto", sans-serif;
-
+    font-family: "Inter", sans-serif;
 }
-.nav_links{
+
+:root{
+    --varAccent: #CD3838;
+    --varAccent2: #363636;
+    --varAccent3: #D75252;
+}
+nav{
     width: 100%;
-    height: 9vmin;
-    background-color: #6975f5;
+    height: 9.5vmin;
+    background-color: var(--varAccent);
+    padding: 3vmin;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
+}
+nav img{
+    width: 25vmin;
+    height: 8.5vmin;
+}
+ 
+ .main_section{
+    width: 100%;
+    height: 90vmin;
+    display: flex;
+    align-items: center;    
+ }
+
+.side_divider{
+    width: 15%;
+    background-color: var(--varAccent2);
+    height: 100%;
+}
+.main_content{
+    width: 100%;
+    margin-left: 5vmin;
+    height: 100%;
+    padding: 50px;
     box-sizing: border-box;
+
 }
 
-.nav_links ul{
-    width: 25%;
-    display:  flex;
-    list-style: none;
-    margin-left: 20vmin;
+/* ###########  REACT Divs */
+
+#main_content_root{
+    background-image: url("images/bg_main.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 95%;
+    background-color: black;
+    margin-top: 1.5vmin;
 }
-.nav_links ul li a{
-    text-decoration: none;
-    font-size: 3vmin;
-    color: white;
-    font-weight: 600;
-    margin-inline: 5vmin;
-}
-.divBox{
-    width: 50vmin;
-    height: 30vmin;
-    background-color: red;
+.main_nav{
+    width: 100%;
+    height: 100%;
     display: none;
 }
-.divBox.active{
-    display: inline;
+.main_nav.active{
+    display: grid;
+    grid-template-columns: 60vmin 1vmin;
+    grid-template-rows: auto;
 }
-.divButton{
-    width: 25vmin;
-    height: 15vmin;
-    border: 5px solid #6975f5;
-    background-color: white;
-    font-size: 5vmin;
-    border-radius: 0;
-}
-.divButton:hover{
-    background-color: #6975f5;
-    border: 5px solid white;
+.nav_widget{
     color: white;
+    background-color: var(--varAccent3);
+    width: 40vmin;
+    border-radius: 10px;
+    font-size: 2.5vmin;
+    font-weight: 500;
+    height: 30vmin;
+    padding: 3.5vmin;
+    margin: 4vmin;
+    box-sizing: border-box;
 }
-.react_root_1{
-    width: 100%;
-    height: 50vmin;
-    display: flex;
+.nav_widget p{
+    font-size: 2vmin;
+}
+.side_divider{
+    display: flex;  
+    flex-direction: column;
+    color: white;
     align-items: center;
-
+}
+.side_divider ul{
+    margin-top: 10vmin;
+    height: 28%;
+    list-style: none;
+    font-size: 3.5vmin;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    text-align: center;
+}
+.btn.active{
+    color: var(--varAccent);
+}
+.btn:hover{
+    color: var(--varAccent);
+}
+.btn.active li{
+    background-color: red;
+}
+.btn.active li::before{
+    content: "|";
+    width: 5vmin;
+    height: 100%;
+    background-color: var(--varAccent);
+    
 }

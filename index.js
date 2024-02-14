@@ -1,29 +1,51 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
+
+
+function SideNav(){
+  const [selectedButton, setButton] = useState("btn1")
+  return(
+    <ul>
+      <li>
+        <a className={selectedButton == "btn1" ? "btn active" : "btn"} onClick={() => {setButton("btn1")}}>Home</a>
+      </li>
+      <li>
+        <a className={selectedButton == "btn2" ? "btn active" : "btn"} onClick={() => {setButton("btn2")}}>Messages</a>
+      </li>
+      <li>
+        <a className={selectedButton == "btn3" ? "btn active" : "btn"} onClick={() => {setButton("btn3")}}>My Course</a>
+      </li>
+  </ul>
+  )
+}
+
 function App() {
-  const [selectedDiv, setDiv] = useState("div1");
-
- 
-
+  const [selectedDiv, setDiv] = useState("main_nav");
   return (
-    <div className="react_root_1">
-      <h1>use State for changing dividers</h1>
-      <div className={selectedDiv == 'div1' ? 'divBox active' : 'divBox'} id="div1">  
-        <h1>This is Div 1</h1>
-        <p>F = Ma</p>
+    <div className={selectedDiv == "main_nav" ? "main_nav active" : "main_nav"}>
+      <div className="nav_widget">
+        <h1>My Timetable</h1>
+        <br/>
+        <p>Access your course timetable.</p>
       </div>
-      <div className={selectedDiv == 'div2' ? 'divBox active' : 'divBox'} id="div2">
-         <h1>This is Div 2</h1>
-         <p>ay caramba</p>
+      <div className="nav_widget">
+        <h1>Student Details</h1>
+        <br/>
+        <p>Check/Verify your information.</p>
       </div>
-      <button className="divButton" onClick={ () => setDiv("div1")} value="Div 1">Div 1</button>
-      <button className="divButton" onClick={ () => setDiv("div2")} value="Div 1">Div 2</button>
+      <div className="nav_widget">
+        <h1>Course Details</h1>
+        <br/>
+        <p>Access all information about your course.</p>
+      </div>
     </div>
   );
 }
 
 
+const mainContentRoot = ReactDOM.createRoot(document.getElementById("main_content_root"));
+mainContentRoot.render(<App />);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />)
+const sideNavRoot = ReactDOM.createRoot(document.getElementById("side_nav"));
+sideNavRoot.render(<SideNav />)
