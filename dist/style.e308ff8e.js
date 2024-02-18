@@ -172,7 +172,7 @@ module.exports = reloadCSS;
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./images\\bg_main.png":[["bg_main.d0c2c26d.png","images/bg_main.png"],"images/bg_main.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./images\\bg_main.png":[["bg_main.d0c2c26d.png","images/bg_main.png"],"images/bg_main.png"],"./images\\logos\\UoMCal1.png":[["UoMCal1.eff7aefd.png","images/logos/UoMCal1.png"],"images/logos/UoMCal1.png"],"./images\\logos\\UoMCal.png":[["UoMCal.118a984a.png","images/logos/UoMCal.png"],"images/logos/UoMCal.png"],"./images\\logos\\UoMStudent1.png":[["UoMStudent1.944a0b0e.png","images/logos/UoMStudent1.png"],"images/logos/UoMStudent1.png"],"./images\\logos\\UoMStudent2.png":[["UoMStudent2.fb8f8bb0.png","images/logos/UoMStudent2.png"],"images/logos/UoMStudent2.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -197,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63995" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54115" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

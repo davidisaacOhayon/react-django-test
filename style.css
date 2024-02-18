@@ -47,11 +47,15 @@ nav img{
 /* ###########  REACT Divs */
 
 #main_content_root{
+    width: 100%;
+    height: 95%;
+}
+.screen{
     background-image: url("images/bg_main.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
-    height: 95%;
+    height: 100%;
     background-color: black;
     margin-top: 1.5vmin;
 }
@@ -76,6 +80,8 @@ nav img{
     padding: 3.5vmin;
     margin: 4vmin;
     box-sizing: border-box;
+    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.438);
+    
 }
 .nav_widget p{
     font-size: 2vmin;
@@ -85,6 +91,9 @@ nav img{
     flex-direction: column;
     color: white;
     align-items: center;
+}
+.intro_div{
+    background-color: red;
 }
 .side_divider ul{
     margin-top: 10vmin;
@@ -102,13 +111,41 @@ nav img{
 .btn:hover{
     color: var(--varAccent);
 }
-.btn.active li{
-    background-color: red;
-}
-.btn.active li::before{
+.btn.active::before{
     content: "|";
     width: 5vmin;
     height: 100%;
     background-color: var(--varAccent);
-    
+}
+
+/* Navigation Widgets */
+/* ## Any new widgets needed to be created, make sure it has both an nth-child reference and it's :hover reference */
+/* Thus you may need to create 2 SVGs to create the design stuff */
+
+.nav_widget:nth-child(1){
+    background-image: url("images/logos/UoMCal1.png");
+    background-size: 50% 65%;
+    background-position: 20vmin 12.5vmin;
+    background-repeat: no-repeat;
+    transition: 0.4s ease-in-out;
+}
+.nav_widget:nth-child(1):hover{
+    background-color: #E2D7D7;  
+    background-image: url("images/logos/UoMCal.png");
+    color: var(--varAccent3);
+    background-position: 20vmin 11.5vmin;
+}
+/* ^ This is an example  */
+.nav_widget:nth-child(2){
+    background-image: url("images/logos/UoMStudent1.png");
+    background-size: 35% 45%;
+    background-position: 22vmin 15.5vmin;
+    background-repeat: no-repeat;
+    transition: 0.4s ease-in-out;
+}
+.nav_widget:nth-child(2):hover{
+    background-color: #E2D7D7;  
+    background-image: url("images/logos/UoMStudent2.png");
+    color: var(--varAccent3);
+    background-position: 22vmin 13.5vmin;
 }
