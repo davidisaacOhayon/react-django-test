@@ -28873,7 +28873,7 @@ function SideNav() {
       setContent("btn2");
     }
   }, "Messages")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    className: currentContent === "btn3" ? "btn active" : "btn",
+    className: currentContent === "course_detail" ? "btn active" : "btn",
     onClick: function onClick() {
       setContent("btn3");
     }
@@ -28946,7 +28946,11 @@ function MainContentScreen() {
     setContent = _useContext2[1];
   return /*#__PURE__*/_react.default.createElement("div", {
     class: "main_content"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Welcome, Student"), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h1", {
+    style: {
+      fontSize: "5vmin"
+    }
+  }, "Welcome, Student"), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("div", {
     id: "main_content_root"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "screen"
