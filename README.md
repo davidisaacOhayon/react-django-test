@@ -123,7 +123,7 @@ function SomeComponent(){
   const [data, setData] = useState(null)
 
   useEffect(() =>{
-  fetch("Url/of/Django/API"); # This issues a GET Request from the Django Url that corresponds to a django URL in the urls.py 
+  fetch("Url/of/Django/API"); // This issues a GET Request from the Django Url that corresponds to a django URL in the urls.py 
   .then((res) =>{ ## 
      if(!res.ok){
         throw new Error("Response was not ok.");
