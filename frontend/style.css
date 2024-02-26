@@ -1,0 +1,158 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inter", sans-serif;
+}
+
+:root{
+    --varAccent: #CD3838;
+    --varAccent2: #363636;
+    --varAccent3: #D75252;
+}
+nav{
+    width: 100%;
+    height: 9.5vmin;
+    background-color: var(--varAccent);
+    padding: 3vmin;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+nav img{
+    width: 25vmin;
+    height: 8.5vmin;
+}
+ 
+ .main_section{
+    width: 100%;
+    height: 90vmin;
+    display: flex;
+    align-items: center;    
+ }
+
+.side_divider{
+    width: 15%;
+    background-color: var(--varAccent2);
+    height: 100%;
+}
+.main_content{
+    width: 100%;
+    margin-left: 5vmin;
+    height: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+
+}
+
+/* ###########  REACT Divs */
+
+#main_content_root{
+    width: 100%;
+    height: 95%;
+}
+.screen{
+    background-image: url("images/bg_main.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    margin-top: 1.5vmin;
+}
+.main_nav{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.main_nav.active{
+    display: grid;
+    grid-template-columns: 60vmin 1vmin;
+    grid-template-rows: auto;
+}
+
+.nav_widget p{
+    font-size: 2vmin;
+}
+.side_divider{
+    display: flex;  
+    flex-direction: column;
+    color: white;
+    align-items: center;
+}
+.intro_div{
+    background-color: red;
+}
+.side_divider ul{
+    margin-top: 10vmin;
+    height: 28%;
+    list-style: none;
+    font-size: 3.5vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+.side_divider ul {
+    text-shadow: 1px 10px 15px rgba(0, 0, 0, 0.822);
+}
+.btn.active{
+    color: var(--varAccent);
+}
+.btn:hover{
+    color: var(--varAccent);
+}
+.btn.active::before{
+    content: "|";
+    width: 5vmin;
+    height: 100%;
+    background-color: var(--varAccent);
+}
+
+/* Navigation Widgets */
+/* ## Any new widgets needed to be created, make sure it has both an nth-child reference and it's :hover reference */
+/* Thus you may need to create 2 SVGs to create the design stuff */
+/*  I know this sucks but this is becuase each background Logo doesn't have a consistent size, and needs personalization. */
+
+.nav_widget{ /* Primary Design*/
+    color: white;
+    background-color: var(--varAccent3);
+    width: 40vmin;
+    border-radius: 10px;
+    font-size: 2.5vmin;
+    font-weight: 500;
+    height: 30vmin;
+    padding: 3.5vmin;
+    margin: 4vmin;
+    box-sizing: border-box;
+    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.438);
+    background-repeat: no-repeat;
+    transition: 0.4s ease-in-out;
+}
+.nav_widget:hover{ /* Universal Hover Style */
+    background-color: #E2D7D7; 
+    color: var(--varAccent3);
+}
+
+
+
+.nav_widget:nth-child(1){
+    background-image: url("images/logos/UoMCal1.png");
+    background-size: 50% 65%;
+    background-position: 20vmin 12.5vmin;
+
+}
+.nav_widget:nth-child(1):hover{
+    background-image: url("images/logos/UoMCal.png");
+    background-position: 20vmin 11.5vmin;
+}
+/* ^ This is an example  */
+.nav_widget:nth-child(2){
+    background-image: url("images/logos/UoMStudent1.png");
+    background-size: 35% 45%;
+    background-position: 22vmin 15.5vmin;
+
+}
+.nav_widget:nth-child(2):hover{
+    background-image: url("images/logos/UoMStudent2.png");
+    background-position: 22vmin 13.5vmin;
+}
