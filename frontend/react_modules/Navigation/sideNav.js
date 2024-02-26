@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ContentContext }  from "./index.js";
 
 export default function SideNav(){
     const [currentContent, setContent] = useContext(ContentContext);
+
     return(
     <div class="side_divider" id="side_nav">
       <ul>
@@ -13,7 +14,7 @@ export default function SideNav(){
           <a className={currentContent === "btn2" ? "btn active" : "btn"} onClick={() => {setContent("btn2")}}>Messages</a>
         </li>
         <li>
-          <a className={currentContent === "course_detail" ? "btn active" : "btn"} onClick={() => {setContent("btn3")}}>My Course</a>
+          <a className={currentContent === "course" ? "btn active" : "btn"} onClick={() => {setContent("course")}}>My Course</a>
         </li>
       </ul>
     </div>
