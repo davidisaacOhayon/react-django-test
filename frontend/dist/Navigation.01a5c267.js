@@ -28873,9 +28873,9 @@ function SideNav() {
       setContent("btn2");
     }
   }, "Messages")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    className: currentContent === "course_detail" ? "btn active" : "btn",
+    className: currentContent === "course" ? "btn active" : "btn",
     onClick: function onClick() {
-      setContent("btn3");
+      setContent("course");
     }
   }, "My Course"))));
 }
@@ -28903,22 +28903,48 @@ function HomeNav() {
     setContent = _useContext2[1];
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "main_nav active"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("button", {
     className: "nav_widget",
     onClick: function onClick() {
       return setContent("timetable");
     }
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "My Timetable"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Access your course timetable.")), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "My Timetable"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Access your course timetable.")), /*#__PURE__*/_react.default.createElement("button", {
     className: "nav_widget",
     onClick: function onClick() {
       return setContent("student_detail");
     }
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Student Details"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Check/Verify your information.")), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Student Details"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Check/Verify your information.")), /*#__PURE__*/_react.default.createElement("button", {
     className: "nav_widget",
     onClick: function onClick() {
-      return setContent("course_detail");
+      return setContent("course");
     }
   }, /*#__PURE__*/_react.default.createElement("h1", null, "Course Details"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Access all information about your course.")));
+}
+},{"react":"node_modules/react/index.js","./index.js":"react_modules/Navigation/index.js"}],"react_modules/Navigation/courseContent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = CourseContent;
+var _react = _interopRequireWildcard(require("react"));
+var _index = require("./index.js");
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function CourseContent() {
+  var _useContext = (0, _react.useContext)(_index.UserContext),
+    _useContext2 = _slicedToArray(_useContext, 2),
+    data = _useContext2[0],
+    setData = _useContext2[1];
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "course_section"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, data.name), /*#__PURE__*/_react.default.createElement("h1", null, "Testing"));
 }
 },{"react":"node_modules/react/index.js","./index.js":"react_modules/Navigation/index.js"}],"react_modules/Navigation/homeNav.js":[function(require,module,exports) {
 "use strict";
@@ -28930,6 +28956,7 @@ exports.default = MainContentScreen;
 var _react = _interopRequireWildcard(require("react"));
 var _index = require("./index.js");
 var _homeComponent = _interopRequireDefault(require("./homeComponent.js"));
+var _courseContent = _interopRequireDefault(require("./courseContent.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
 function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
@@ -28944,25 +28971,29 @@ function MainContentScreen() {
     _useContext2 = _slicedToArray(_useContext, 2),
     currentContent = _useContext2[0],
     setContent = _useContext2[1];
+  var _useContext3 = (0, _react.useContext)(_index.UserContext),
+    _useContext4 = _slicedToArray(_useContext3, 2),
+    data = _useContext4[0],
+    setData = _useContext4[1];
   return /*#__PURE__*/_react.default.createElement("div", {
     class: "main_content"
   }, /*#__PURE__*/_react.default.createElement("h1", {
     style: {
       fontSize: "5vmin"
     }
-  }, "Welcome, Student"), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Welcome, ", data ? data.name : "user"), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("div", {
     id: "main_content_root"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "screen"
-  }, currentContent === "home" ? /*#__PURE__*/_react.default.createElement(_homeComponent.default, null) : null)));
+  }, currentContent === "home" ? /*#__PURE__*/_react.default.createElement(_homeComponent.default, null) : null, currentContent === "course" ? /*#__PURE__*/_react.default.createElement(_courseContent.default, null) : null)));
 }
-},{"react":"node_modules/react/index.js","./index.js":"react_modules/Navigation/index.js","./homeComponent.js":"react_modules/Navigation/homeComponent.js"}],"react_modules/Navigation/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./index.js":"react_modules/Navigation/index.js","./homeComponent.js":"react_modules/Navigation/homeComponent.js","./courseContent.js":"react_modules/Navigation/courseContent.js"}],"react_modules/Navigation/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ContentContext = void 0;
+exports.UserContext = exports.ContentContext = void 0;
 var _react = _interopRequireWildcard(require("react"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 var _sideNav = _interopRequireDefault(require("./sideNav"));
@@ -28976,8 +29007,8 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-var ContentContext = exports.ContentContext = (0, _react.createContext)(null); // Create a Context variable to pass through respective module
-
+var ContentContext = exports.ContentContext = /*#__PURE__*/(0, _react.createContext)(null); // Create a Context variable to pass through respective module
+var UserContext = exports.UserContext = /*#__PURE__*/(0, _react.createContext)(null);
 function ContentDisplay() {
   var _useState = (0, _react.useState)("home"),
     _useState2 = _slicedToArray(_useState, 2),
@@ -28986,26 +29017,31 @@ function ContentDisplay() {
   var _useState3 = (0, _react.useState)(null),
     _useState4 = _slicedToArray(_useState3, 2),
     data = _useState4[0],
-    setData = _useState4[1];
+    setData = _useState4[1]; // user data
+
   (0, _react.useEffect)(function () {
-    fetch('http://localhost:8000/test/') // This poses a security risk in the industry. Don't do this shit lmao
+    fetch('http://127.0.0.1:8000/getStudent/') // This poses a security risk in the industry. Don't do this shit lmao, just refer to the Database if its in the same directory
     .then(function (res) {
       if (!res.ok) {
         throw new Error("Network Response is not ok");
       } else {
-        return res.json();
+        console.log("Data Received.");
+        return res.json(); // parses the data into JSON format. 
       }
     }).then(function (data) {
       return setData(data);
-    }).catch(function (error) {
+    }) // set the Data to the useState data.
+    .catch(function (error) {
       return console.error("There was an error", error);
     });
   }, []);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "main_section"
-  }, data ? /*#__PURE__*/_react.default.createElement("div", null, data.message) : /*#__PURE__*/_react.default.createElement("div", null, "Loading..."), /*#__PURE__*/_react.default.createElement(ContentContext.Provider, {
+  }, /*#__PURE__*/_react.default.createElement(ContentContext.Provider, {
     value: [currentContent, setContent]
-  }, /*#__PURE__*/_react.default.createElement(_sideNav.default, null), /*#__PURE__*/_react.default.createElement(_homeNav.default, null)));
+  }, /*#__PURE__*/_react.default.createElement(_sideNav.default, null), /*#__PURE__*/_react.default.createElement(UserContext.Provider, {
+    value: [data, setData]
+  }, /*#__PURE__*/_react.default.createElement(_homeNav.default, null))));
 }
 var mainContentRoot = _reactDom.default.createRoot(document.getElementById("main_section"));
 mainContentRoot.render( /*#__PURE__*/_react.default.createElement(ContentDisplay, null));
@@ -29034,7 +29070,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58428" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49489" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

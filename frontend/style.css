@@ -79,9 +79,7 @@ nav img{
     color: white;
     align-items: center;
 }
-.intro_div{
-    background-color: red;
-}
+ 
 .side_divider ul{
     margin-top: 10vmin;
     height: 28%;
@@ -121,12 +119,20 @@ nav img{
     font-size: 2.5vmin;
     font-weight: 500;
     height: 30vmin;
-    padding: 3.5vmin;
     margin: 4vmin;
     box-sizing: border-box;
     box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.438);
     background-repeat: no-repeat;
     transition: 0.4s ease-in-out;
+}
+.widget_style{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 50px;
+    background-color: white;
 }
 .nav_widget:hover{ /* Universal Hover Style */
     background-color: #E2D7D7; 
