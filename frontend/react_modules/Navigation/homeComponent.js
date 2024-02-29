@@ -18,14 +18,18 @@ export default function HomeNav(){
           </span>
         </button>
         <button className="nav_widget" onClick={() => setContent("student_detail")}>
-          <h1>Student Details</h1>
-          <br/>
-          <p>Check/Verify your information.</p>
+          <span className="widget_style">
+            <h1>Student Details</h1>
+            <br/>
+            <p>Check/Verify your information.</p>
+          </span>
         </button>
         <button className="nav_widget" onClick={() => setContent("course")}>
-          <h1>Course Details</h1>
-          <br/>
-          <p>Access all information about your course.</p>
+          <span className="widget_style">
+            <h1>Course Details</h1>
+            <br/>
+            <p>Access all information about your course.</p>
+          </span>
         </button>
      </div>
     );

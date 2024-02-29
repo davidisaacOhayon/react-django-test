@@ -14,7 +14,7 @@ def navigatorPage(request):
 
 def returnStudent(request):
     student = Student.objects.first()
-    courseID = student.courseID.courseID # Yeah, I know there's a repetition. But doing student.courseID returns the entire object.
+    courseID = student.courseID.courseID # Yeah, I know there's a repetition. But doing student.courseID returns the entire data object for some reason
     data = {
         'id' : student.studentID,
         'name': student.name,
@@ -24,5 +24,13 @@ def returnStudent(request):
     
     return JsonResponse(data)
 
+
+def returnCourse(request, courseID):
+    course = Course.objects.get(pk = courseID)
+    data = {
+        'courseName' : course.courseName
+    }
+
+    return JsonResponse(data)
     
 
