@@ -12,17 +12,22 @@
 // instead of just having example.js and index.js transpiled and linking them instead of having a merged transpiled module. I'm sorry.
 
 
+// Fun fact, the only reason we're using this transpiler is because react doesn't have a compiler. it was just announced 29/02/2024 that we're getting
+// a compiler, Fucking finally.
 
 
 const path = require('path');
 
 module.exports = {
   entry: { // List down each react module alongside their directory including './' 
+    login: './react_modules/backend/login.js',
+    testLogin: './react_modules/Navigation/testLogin.js',
     index: './react_modules/Navigation/index.js',
     homeNav: './react_modules/Navigation/homeNav.js',
     homeComponent: './react_modules/Navigation/homeComponent.js',
     sideNav: './react_modules/Navigation/sideNav.js',
     courseContent: './react_modules/Navigation/courseContent.js',
+    fetch: './react_modules/Navigation/fetch.js'
   },
   output: {
     filename: '[name].js', // Name of outputted javascript file
