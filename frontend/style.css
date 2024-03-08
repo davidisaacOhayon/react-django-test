@@ -129,6 +129,7 @@ nav img{
     font-weight: 500;
     height: 30vmin;
     margin: 4vmin;
+    border-style: none;
     box-sizing: border-box;
     box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.438);
     background-repeat: no-repeat;
@@ -179,8 +180,25 @@ nav img{
 /* Student course section */
 .course_section{
     background-color: #FEF5F5;
-    justify-self: center;
-    align-self: center;
     width: 95%;
     height: 95%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 7vmin;
+    box-sizing: border-box;
+    color: var(--varAccent3);
+    font-weight: 100;
+}
+.course_section hr {
+    width: 85%;
+    height: 0.5vmin;
+    border: none;
+    background-color: var(--varAccent3);
+}
+.course_section h1 {
+    font-size: 5vmin;
+}
+.course_details{
+    font-size: 3vmin;
 }
