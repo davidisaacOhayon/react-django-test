@@ -7,8 +7,9 @@ export default function TestForm(){
    const [username, setUsername] = useState(null);
 
    const handleForm = (event) =>{
-    event.preventDefault(); // Prevent No Value forms
-    getLogin(username, password)
+    // event.preventDefault(); // Prevent No Value forms
+    // getLogin(username, password)
+    console.log("Test...");
    }
 
 
